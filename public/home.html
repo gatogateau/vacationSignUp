@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/style/style.css" />
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script scr="/assets/js/burgers.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <!-- change the image src to "./assets/images/giantBurger.jpg" when running the server -->
+            <img id="burgerpic1" src="./assets/images/giantBurger.jpg" alt="this is a generic burger picture" style="width:400px">
+        </center>
+        <h1>
+            <center>Burgers YUMMMMM</center>
+        </h1>
+        <!-- add image of burger-->
+    </div>
+    <div class="allBurgers container">
+
+
+        <div class="col-md-5 currentBurgers">
+            <h2>
+                <center>current burgers</center>
+            </h2>
+
+        </div>
+        <div class="col-md-2 eatMeButton">
+            <button class="btn btn-primary btn-lg eatMe">Put me in your belly</button>
+        </br>
+        <button class="btn btn-primary btn-lg deleteMe">Delete this burger</button>
+        </div>
+        <div class="col-md-5 devouredBurgers">
+            <h2>
+                <center>burgers devoured</center>
+            </h2>
+
+        </div>
+
+    </div>
+    <div class="container orderNew">
+        <div class="first">
+            <!-- empty col -->
+        </div>
+
+        <div class="addBurger">
+            <!-- <center> -->
+            <center>
+                <h2>Add a burger</h2>
+            </center>
+            <!-- <center> -->
+            <center>
+
+                <form action="/burgers/create" method="POST" class="create-form">
+
+                    <div class="form-group">
+                        <label for="ca">Hamburger Name:</label>
+                        <input type="text" id="addABurger" name="name">
+                    </div>
+
+                    <!-- <div class="form-group">
+                        <label for="devoured">Did you eat the burger already?</label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" id="didYouEat" name="devoured" value="1" checked> Devoured!
+                        </label>
+                        <!-- <br> -->
+                        <!-- <label class="radio-inline">
+                            <input type="radio" id="didNotEat" name="devoured" value="0"> available
+                        </label> -->
+                    <!-- </div> --> 
+
+                    <button type="submit">Add a BIG TASTY</button>
+                </form>
+            </center>
+            <!-- </center> -->
+            <!-- </center> -->
+        </div>
+        <div class="third">
+            <!-- empty col -->
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<div class="container wholePage">
+    <div class="container burgerPic">
+        <div class="row differentRows">
+            <div class="col-xs-3 firstMessage">
+                {{!-- can add pic or message --}}
+            </div>
+            <div class="col-xs-6 centerPic">
+                <div class="container picContainer">
+                {{!-- <center> --}}
+                    <!-- change the image src to " ./assets/images/giantBurger.jpg " when running the server -->
+                    <img id="burgerpic1 " src="./assets/images/giantBurger.jpg " alt="this is a generic burger picture" 
+                    {{!-- style="width:400px" --}}
+                >
+                </div>
+                {{!-- </center> --}}
+            </div>
+            <div class="col-xs-3 firstMessage">
+                {{!-- can add pic or message --}}
+            </div>
+
+        </div>
+        {{!-- Burger Header --}}
+        <div class="row differentRows">
+            <div class="col-xs-3 firstMessage">
+                {{!-- can add pic or message --}}
+            </div>
+            <div class="col-xs-6 message">
+
+                <h1 id="yummm">
+                    <center>Burgers YUMMMMM</center>
+                </h1>
+            </div>
+
+            <div class="col-xs-3 firstMessage">
+                {{!-- can add pic or message --}}
+            </div>
+
+        </div>
+        {{!-- all burgers container, on list and Devoured --}}
+    </div class="container">
+    <div class="allBurgers container">
+
+
+        <div class="col-xs-4 currentBurgers" id="dbInput0">
+            <h2>current</h2>
+            <ul>
+                {{#each burgers}} {{#unless this.devoured}}
+                <li>
+                    {{this.burgerName}} {{!-- need a form class id --}}
+                    <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+                        <input type="hidden" name="devoured" value="true">
+                        <button id="eat" type="submit">Put me in your Belly!</button>
+                    </form>
+                </li>
+                {{/unless}} {{/each}}
+
+            </ul>
+        </div>
+
+        <div class="col-xs-4 addMe" id="userInput">
+                    <h2>
+                <center>add me</center>
+            </h2>
+            <form class="create-form" id="entryBox" action="burgers/create" method="POST">
+                <div class="form-group" id="bugrerPlaceHolder">
+                    <input type="text" id="burgerAdd" name="burgerName" placeholder="name your burger">
+
+                </div>
+                <div id="submitButton">
+                    <button id="createBurg" type="submit">CREATE</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-4 eaten" id="dbInput0">
+            <h2>devoured</h2>
+            <ul>
+                {{#each burgers}} {{#if devoured}}
+                <li>
+                    {{this.burgerName}}
+                    <form action="burgers/delete/{{this.burgerName}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="burgerName" value={{this.burgerName}}>
+                        <button id="goneGone" type="submit">Delete this deliciousness</button>
+                    </form>
+                </li>
+                {{/if}} {{/each}}
+            </ul>
+        </div>
+
+    </div>
+    <div class="container create-new">
+        <div class="row">
+
+            <div class="col-xs-4">
+                {{!-- spacer --}}
+            </div>
+        </div>
+    </div>
+
+
+    {{!--
+    <div class="col-md-2 eatMeButton ">
+        <button class="btn btn-primary btn-lg eatMe ">Put me in your belly</button>
+        </br>
+        <button class="btn btn-primary btn-lg deleteMe ">Delete this burger</button>
+    </div>
+    <div class="col-md-5 devouredBurgers ">
+        <h2>
+            <center>burgers devoured</center>
+        </h2>
+
+    </div> --}} {{!--
+    <div class="container orderNew ">
+        <div class="first ">
+            <!-- empty col -->
+        </div>
+        --}} {{!--
+        <div class="addBurger ">
+            <!-- <center> -->
+            <center>
+                <h2>Add a burger</h2>
+            </center>
+            <!-- <center> -->
+            <center> --}} {{!-- create the burger --}} {{!--
+                <form action="/burgers/create" method="POST " class="create-form ">
+
+                    <div class="form-group ">
+                        <label for="ca ">Hamburger Name:</label>
+                        <input type="text " id="addABurger " name="burgerName ">
+                    </div> --}}
+
+                    <!-- <div class="form-group ">
+                        <label for="devoured ">Did you eat the burger already?</label>
+                        <br>
+                        <label class="radio-inline ">
+                            <input type="radio " id="didYouEat " name="devoured " value="1 " checked> Devoured!
+                        </label>
+                        <!-- <br> -->
+                    <!-- <label class="radio-inline ">
+                            <input type="radio " id="didNotEat " name="devoured " value="0 "> available
+                        </label> -->
+                    <!-- </div> -->
+
+                    {{!--
+                    <button type="submit ">Add a BIG TASTY</button>
+                </form>
+            </center>
+            <!-- </center> -->
+            <!-- </center> -->
+        </div>
+        <div class="third "> --}}
+            <!-- empty col -->
+            {{!-- </div>
+    </div> --}}
+</div>

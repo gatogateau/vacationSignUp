@@ -1,0 +1,142 @@
+body {
+    background: lightgray;
+    /* background: linear-gradient(lightblue, white); */
+    
+}
+.wholePage {
+    width:100%;
+    height: 900px;
+    padding-top:30px;
+    background: lightgray;
+    background: linear-gradient(lightblue, white);
+    /* margin: 20px; */
+    /* margin-bottom: 40px; */
+    /* padding-top: 20px; */
+    /* padding: 20px; */
+    border-style:solid;
+    border-width:3px;
+    border-color:red;
+}
+
+/* top row */
+differentRows {
+    width:90%;
+    border-style:dotted;
+    border-width:3px;
+    border-color:darkblue;
+    margin: 5px;
+
+}
+
+.burgerPic {
+    /* margin: 20px;
+    padding:20px; */
+    border-style:solid;
+    border-width:1px;
+    /* width:90%; */
+}
+.allBurgers {
+    border-style:solid;
+    border-width:1px;
+}
+
+
+/* burger image */
+.container img {
+    width: 100%;
+    height: auto;
+}
+/* burger image */
+.picContainer {
+    width:100%;
+}
+/* #burgerpic1 {
+    width: 90%;
+} */
+.firstMessage {
+    border-style:solid;
+    border-width:1px;
+}
+
+.centerPic {
+    border-style:solid;
+    border-width:1px;
+    padding: 6px;
+}
+
+
+.currentBurgers {
+    border-style:solid;
+    border-width:1px;
+    height: 440px;
+
+}
+
+.addMe {
+    border-style:solid;
+    border-width:1px;
+    height: 440px;
+
+}
+
+.eaten {
+    border-style:solid;
+    border-width:1px;
+    height: 440px;
+
+}
+
+h2 {
+    text-align: center;
+    font:bold;
+    font-family:serif;
+    font-size:16pt;
+}
+
+#eat {
+    background-color:turquoise;
+    font-size:12px;
+    padding:4px 20px;
+    border-radius: 8px;
+    color: black;
+    border: 2px solid black;
+
+}
+
+#goneGone {
+    background-color:firebrick;
+    font-size:12px;
+    padding:4px 12px;
+    border-radius: 8px;
+    color: black;
+    border: 2px solid black;
+
+}
+
+#burgerAdd {
+    text-align:center;
+    background-color:rgb(229, 232, 235);
+    font-size:12px;
+    padding:4px 12px;
+    border-radius: 8px;
+    color: black;
+    border: 2px solid black;
+
+}
+#entryBox {
+    padding:14px;
+    text-align: center;
+}
+#createBurg {
+    font-size:12px;
+    padding:4px 12px;
+    border-radius: 8px;
+    color: black;
+    border: 2px solid black;
+    background-color:lightsalmon;
+}
+
+li {
+    font-size:12pt;
+    font-family:serif;
+}
